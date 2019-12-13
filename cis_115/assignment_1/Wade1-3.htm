@@ -1,0 +1,34 @@
+<html>
+<body>
+<script>
+
+/*
+Program Name:  Wade1-3.htm
+Purpose:       To calculate the area of a room and the cost
+               for the material to tile the floor of the room
+Author:        Nicholas Wade
+Date Modified: 05/30/2012
+*/
+
+//declare variables
+var length, width; //length and width of room
+var area;          //total are of the room
+var tileCost;      //cost of tile per square foot
+var totCost;
+
+//Get input from the user
+length = prompt("What is the length of the room (in feet)?","");
+width = prompt("What is the width of the room (in feet)?","");
+tileCost = prompt("What is the cost per square foot of tile","");
+
+//Calculations
+area = length * width     //calculates the area
+totCost = area * tileCost //calculates the final cost of the tile
+
+//displays information
+document.write("Area of the room: " + area + "<br>");
+document.write("Total cost of the tile: $" + totCost);
+
+</script>
+</body>
+</html>

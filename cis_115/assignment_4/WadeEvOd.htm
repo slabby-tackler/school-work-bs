@@ -1,0 +1,32 @@
+<html><head><title>WadeEvOd</title></head>
+<body>
+<script>
+
+/*
+Program Name: WadeEvOd
+Purpose:      To display the even then odd numbers from
+              0 to a user defined number
+Author:       Nicholas Wade
+Date Mod:     03 July 2012
+*/
+
+var num;   //holds the users number
+var count; //counter
+
+num = prompt("Please enter a positive number.","");
+
+if(isNaN(num))   //tests for a number
+   document.write("INVALID ENTRY! PROCESS TERMINATED");
+else if(num < 0) //tests if the number is positive
+   document.write("INVALID ENTRY! PROCESS TERMINATED");
+else{
+     for(count = 0; count <= num; count += 2)
+         document.write(count + "<br>");
+     document.write("<p>"); //puts double space between two # lists         
+     for(count = 1; count <= num; count += 2){
+         document.write(count + "<br>");
+         }
+     }
+</script>
+</body>
+</html>

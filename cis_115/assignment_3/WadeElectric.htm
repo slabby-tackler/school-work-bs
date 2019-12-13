@@ -1,0 +1,46 @@
+<html><head><title>WadeElectric</title></head>
+<body>
+<script>
+// Program name: WadeElectric
+// Purpose: Calculate electric bill based off old and new reading
+// Author: Nicholas Wade
+// Date last modified: 26-Jun-2012
+
+var BASE_USAGE = 300;
+var MINIMUM_CHARGE = 50; //for first 300 kwh
+var EXCESS_RATE = 0.03;  //3 cents per kwhUsed over 300
+
+var oldReading;
+var newReading;
+var kwhUsed;
+var excessUsage;
+var excessUsageCharge;
+var totalAmount;
+
+document.write("Welcome to your electric bill calculator!<br>");
+
+oldReading = prompt("What was your old meter reading? ","");
+newReading = prompt("What is your new meter reading? ","");
+
+kwhUsed = newReading - oldReading;
+
+if (kwhUsed > BASE_USAGE){
+    excessUsage = newReading - BASE_USAGE;
+    excessUsageCharge = EXCESS_RATE * excessUsage;
+    totalAmount = MINIMUM_CHARGE + excessUsageCharge;
+
+    document.write("Old Reading: " + oldReading + "<br>");
+    document.write("New Reading: " + newReading + "<br>");
+    document.write("Your bill will be $" + totalAmount.toFixed(2) + "<br>");
+    }
+
+else{
+     document.write("Old Reading: " + oldReading + "<br>");
+     document.write("New Reading: " + newReading + "<br>");
+     document.write("your bill will be $" + MINIMUM_CHARGE.toFixed(2) + "<br>");
+     }
+
+document.write("Thank you. Have a great day!");
+</script>
+</body>
+</html>

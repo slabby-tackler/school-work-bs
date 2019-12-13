@@ -1,0 +1,44 @@
+<html>
+<head>
+<h2><center>
+<font color = "pink">
+********************<br>
+* </font>
+<font color = "Red">
+Lirio's Flower Shop
+</font> <font color = "pink">
+*<br>
+********************
+</font>
+</center></h2>
+<title>Best Flower Shop In The World</title>
+
+<script>
+var flowerChoice
+
+function pickFlower(value){
+         flowerChoice = value;
+         }
+function displayMessage(name){
+         infoBox.value += name + " thank you for your inquiry about a " + flowerChoice + "\n";
+         }
+</script>
+</head>
+
+<body bgcolor = "blue" text = "white">
+Welcome to Lirio's Flower Shop!<p>
+
+Please enter your name:<br>
+<input type = "text" name = "userName" value = "" size = "20"><p>
+
+Please select one:<br>
+<input type = "radio" name = "flower" value = "rose" onClick = "pickFlower(value)">Rose<br>
+<input type = "radio" name = "flower" value = "daisy" onClick = "pickFlower(value)">Daisy<br>
+<input type = "radio" name = "flower" value = "carnation" onClick = "pickFlower(value)">Carnation<br>
+
+<input type = "button" name = "submit" value = "Request Info" onClick = "displayMessage(userName.value)"><p>
+
+<textarea name = "infoBox" value = "" rows = "8" colmns = "30"></textarea>
+
+</body>
+</html>

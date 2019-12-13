@@ -1,0 +1,37 @@
+<html>
+<head>
+<title>WadeGasMileage</title>
+<script>
+/*
+Program Name: WadeGasMileage
+Purpose:      Calculate gas mileage using a function
+Author:       Nicholas Wade
+Date Mod:     19 July 2012
+*/
+
+function gasMile(gallons, miles){
+         var mileage;
+         mileage = miles / gallons;
+
+         return mileage;
+         }
+
+</script>
+</head>
+
+<body>
+<script>
+var mileage;
+var gallons;
+var miles;
+
+miles = prompt("how many miles did you drive?","");
+gallons = prompt("how many gallons of fuel did you use","");
+
+mileage = gasMile(gallons, miles);
+
+document.write("Your gas mileage is " + mileage + " mpg!");
+
+</script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<html><head><title>WadeSure2Nums</title></head>
+<body>
+<script>
+/*
+Program Name: WadeSure2Nums
+Purpose:  find the sum and average of two nums and make sure
+          they are in fact nums
+Author:  Paul Addison
+Moded by:  Nicholas Wade
+Date Mod:  03 July 2012
+*/
+
+var num1, num2;
+var total;
+var avg;
+var more;
+
+document.write("Welcome to the number adding average calculator!<p>");
+
+do{
+   do{
+      do{
+         num1 = prompt("What is the first number?","");
+         }
+         while(isNaN(num1));
+         }
+   while(num1 >= 0);
+
+   do{
+      do{
+         num1 = parseFloat(num1);
+         num2 = prompt("What is the second number?","");
+         }
+         while(isNaN(num2));
+         }
+   while(num2 >=0);
+
+   num2 = parseFloat(num2);
+   total = num1 + num2;
+   avg = total / 2;
+
+   document.write("First number = " + num1 + ", Second number = " + num2 +"<br>");
+   document.write("Sum = " + total + ", Average = " + avg + "<p>");
+
+   more = prompt("More numbers to add? (y/n)","");
+   }
+while(more == 'y');
+
+document.write("Have a great day!");
+
+</script>
+</body>
+</html>

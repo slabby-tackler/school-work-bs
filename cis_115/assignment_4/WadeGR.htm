@@ -1,0 +1,50 @@
+<html><head><title>WadeGR</title></head>
+<body>
+<script>
+/*
+Program Name: WadeGR
+Purpose:      Calculate the grade of a student with a user
+              determined number of students
+Input:        Number of students and three grades of each student
+Author:       Nicholas Wade
+Date Mod:     06 July 2012
+*/
+
+var count1, count2; //count1 = counter 1st for, count2 = counter 2nd for
+var grade;
+var numStudent;
+var runTot; //running total for student
+var avg; //average
+
+numStudent = prompt("How many students are there?","")
+
+for(count1 = 1; count1 <= numStudent; count1++){
+
+  runTot = 0;
+  document.write("student " + count1 + " grades:<br>");
+  for(count2 = 1; count2 <= 3; count2++){
+    //Start >= 0 validation loop
+    do{
+      //Start <= 100 validation loop
+      do{
+        //Start isNaN validation loop
+        do
+          grade = prompt("What is your " + count2 + " grade?","0");
+        while(isNaN(grade)); // end isNaN loop
+        }
+      while(grade > 100); //end <= 100 loop
+       }
+    while(grade < 0); //end >= 0 loop
+
+    grade = parseInt(grade);
+    document.write("  Grade " + count2 + ": " + grade + "<br>");
+    runTot += grade;
+    }
+
+  avg = runTot / 3;
+  document.write("Average: " + avg + "<p>");
+  }
+
+</script>
+</body>
+</html>

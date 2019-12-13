@@ -1,0 +1,53 @@
+<html>
+<head><title>WadeArray1.htm</title></head>
+
+<body>
+<script>
+
+/*
+Program Name: WadeArray1.htm
+Purpose:      Create an array that can hold 5 book titles; input of the titles
+              is through a while loop; display of titles is through a for loop
+Author:       Paul Addison
+Mod By:       Nicholas Wade
+Date Mod:     21 July 2012
+*/
+
+var size = 0;
+var bookTitle = new Array(4);
+var moreData;
+var count;
+
+moreData = prompt("Do you want to enter the title of a book? (y,n)","");
+
+bookTitle[0] = "";
+bookTitle[1] = "";
+bookTitle[2] = "";
+bookTitle[3] = "";
+bookTitle[4] = "";
+
+//begin while
+while(moreData == "y" && size <= 4){
+      bookTitle[size] = prompt("What is the title of the book.","");
+
+      moreData = prompt("Do you want to enter another title?","");
+
+      size++;
+      }
+//end while
+
+//begin if
+if(size > 4)
+  document.write("I'm sorry, you can only enter up to 5 titles.");
+//end if
+
+document.write("The book titles you entered are: <br>");
+
+//begin for
+for(count = 0 ; count <= 4 ; count++)
+       document.write(bookTitle[count] + "<br>");
+//end for
+
+</script>
+</body>
+</html>

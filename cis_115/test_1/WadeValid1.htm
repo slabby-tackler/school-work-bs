@@ -1,0 +1,23 @@
+<html>
+<head><title>WadeValid1</title></head>
+<body>
+<script>
+/*
+Program Name: WadeValid1.htm
+Purpose:      To show validity of a value that is greater than 100 and even
+Author:       Nicholas Wade
+Date Mod:     19 July 2012
+*/
+
+var q; //will hold the number the user enters
+
+q = prompt("Please enter an even number that is greater than 100","0");
+
+if((q % 2) == 0 && q > 100)
+    document.write("The number you entered is valid!");
+else
+    document.write("The number you entered is invalid!");
+
+</script>
+</body>
+</html>

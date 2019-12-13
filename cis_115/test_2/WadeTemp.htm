@@ -1,0 +1,68 @@
+<html>
+<head>
+<title>WadeTemp.html</title>
+<script>
+function calculate(temp1, temp2, temp3, temp4, temp5){
+         var holder;
+         var average;
+
+         while(temp1 < temp2 || temp2 < temp3 || temp3 < temp4 || temp4 < temp5){
+               if(temp1 < temp2){
+                  holder = temp1;
+                  temp1 = temp2;
+                  temp2 = holder;
+                  }
+               if(temp2 < temp3){
+                  holder = temp2;
+                  temp2 = temp3;
+                  temp3 = holder;
+                  }
+               if(temp3 < temp4){
+                  holder = temp3;
+                  temp3 = temp4;
+                  temp4 = holder;
+                  }
+               if(temp4 < temp5){
+                  holder = temp4;
+                  temp4 = temp5;
+                  temp5 = holder;
+                  }
+               }
+
+         temp1 = parseInt(temp1);
+         temp2 = parseInt(temp2);
+         temp3 = parseInt(temp3);
+         temp4 = parseInt(temp4);
+         temp5 = parseInt(temp5);
+
+         average = (temp1 + temp2 + temp3 + temp4 + temp5) / 5;
+         infoBox.value += "Highest: " + temp1 + "\nLowest: " + temp5 + "\nAverage: " + average;
+         }
+function reset(){
+         temp1.value = "";
+         temp2.value = "";
+         temp3.value = "";
+         temp4.value = "";
+         temp5.value = "";
+         }
+</script>
+</head>
+
+<body>
+Monday<br>
+<input type = "text" name = "temp1" value = "" size = "20"><p>
+Tuesday<br>
+<input type = "text" name = "temp2" value = "" size = "20"><p>
+Wednesday<br>
+<input type = "text" name = "temp3" value = "" size = "20"><p>
+Thursday<br>
+<input type = "text" name = "temp4" value = "" size = "20"><p>
+Friday<br>
+<input type = "text" name = "temp5" value = "" size = "20"><br>
+<input type = "button" name = "submit" value = "Request Info" onClick = "calculate(temp1.value,temp2.value,temp3.value,temp4.value,temp5.value)">
+<input type = "button" name = "submit" value = "Request Info" onClick = "reset(temp1.value,temp2.value,temp3.value,temp4.value,temp5.value)"><p>
+
+<textarea name = "infoBox" value = "" rows = "8" colmns = "30"></textarea>
+</body>
+
+</html>

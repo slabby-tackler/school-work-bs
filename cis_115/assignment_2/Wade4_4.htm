@@ -1,0 +1,42 @@
+<html>
+<head>
+<!--
+Program Name:  Wade4_4
+Purpose:       Calculate the total cost of an order of buttons
+               with shipping and tax
+Author:        Nicholas Wade
+Date Modified: 07 June 2012
+-->
+</head>
+
+<body>
+<script>
+
+var TAX = 0.06;                  //tax rate
+var SHIP = 2.00;        //shipping rate
+var BUTTON_COST = 0.99; //cost per button
+var name;                        //the user's name
+var email;                       //the user's e-mail
+var numButton;                   //number of buttons to order
+var totTax;                      //amount of taxes paid
+var subTot;                      //subtotal
+var totCost;                     //total cost of order
+
+name = prompt("What is your name? ","");
+email = prompt("What is your E-mail address? ","");
+numButton = prompt("How many buttons would you like? ","");
+
+numButton = parseInt(numButton)
+
+subTot = numButton * BUTTON_COST;
+totTax = subTot * TAX;
+totCost = subTot + totTax + SHIP;
+
+document.write("Name: " + name + "<br>");
+document.write("E-mail: " + email + "<br>");
+document.write("The total cost for your order is $" + totCost.toFixed(2) + ".");
+
+</script>
+</body>
+
+</html>

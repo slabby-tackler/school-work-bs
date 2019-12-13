@@ -1,0 +1,35 @@
+<html>
+<body>
+<script>
+
+/*
+Program Name:  Wade1-2.htm
+Purpose:       Calculate the amount owed by a client to watt gives
+               based on the number of hours worked and the hourly rate
+Author:        Nicholas Wade
+Date Modified: 05/30/2012
+*/
+
+//Declare variables and constants
+var totHoursWorked;  //total number of hours worked
+var amtOwed;         //amount owed
+var clientBusiness;  //for the client business name
+var HOURLY_RATE = 30;
+var BR = "<br>";     //HTML line break
+
+
+//Get input from the user
+totHoursWorked = prompt("How many hours were worked","");
+clientBusiness = prompt("What is the client's business name","");
+
+//calculations
+amtOwed = totHoursWorked * HOURLY_RATE;
+
+//display company name, client's business name, and the amount owed by the client
+document.write("Watt Gives" + BR);
+document.write(clientBusiness + BR);
+document.write("Amount owed: $" + amtOwed);
+
+</script>
+</body>
+</html>

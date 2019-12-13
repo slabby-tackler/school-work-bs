@@ -1,0 +1,84 @@
+<html>
+<head>
+<h2><center>
+<font color = "pink">
+****************************<br>
+* </font>
+<font color = "Red">
+ Nicholas Wade's Rent-A-Car
+</font> <font color = "pink">
+ *<br>
+****************************
+</font>
+</center></h2>
+<title>Best Rent-A-Car In The World</title>
+<script>
+var needIt;
+
+function needInsurance(insur){
+         needIt = insur;
+         }
+
+function finalOutcome(car, days){
+         var TAX = .07;
+         var carCost;
+         var taxTotal;
+         var subTotal;
+         var total;
+         var insurCost = 0;
+
+         infoBox.value = "";
+
+         if(car == "invalid")
+            infoBox.value = "Please select a car from the drop down box.";
+
+         else{
+             if(car == "Compact")
+                carCost = 30;
+
+             else if(car == "Full-Size")
+                carCost = 40;
+
+             else
+                carCost = 50;
+
+             if(needIt == "Yes")
+                insurCost = 7 * days;
+
+             carCost *= days;
+             subTotal = insurCost + carCost;
+             taxTotal = subTotal * TAX;
+             total = subTotal + taxTotal;
+             infoBox.value = "Rental Cost: $" + carCost.toFixed(2) + "\nInsurance:   $" +
+                     insurCost.toFixed(2) + "\n" +
+                     "Subtotal:    $" + subTotal.toFixed(2) + "\nTax:         $" + taxTotal.toFixed(2) + "\n" +
+                     "Total:       $" + total.toFixed(2);
+             }
+         }
+
+</script>
+</head>
+
+<body bgcolor = "black" text = "white">
+Welcome to Nicholas Wade's Rent-A-Car!<p>
+
+<select name = "car">
+        <option value = "invalid">Select</option>
+        <option value = "Compact">Compact</option>
+        <option value = "Full-Size">Full-Size</option>
+        <option value = "Minivan">Mini Van</option>
+</select>
+<p>
+How many days do you need the car:<br>
+<input type = "text" name = "numDays" value = "" size = "5"><p>
+
+Do you need insurance:<br>
+<input type = "radio" name = "insur" value = "Yes" onClick = "needInsurance(value)">Yes<br>
+<input type = "radio" name = "insur" value = "No" onClick = "needInsurance(value)">No<br>
+
+<input type = "button" name = "submit" value = "Submit" onClick = "finalOutcome(car.value, numDays.value)"><p>
+
+<textarea name = "infoBox" value = "" rows = "8" colmns = "50"></textarea>
+
+</body>
+</html>

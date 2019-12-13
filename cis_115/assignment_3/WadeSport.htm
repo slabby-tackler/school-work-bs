@@ -1,0 +1,28 @@
+<html><head><title>WadeSport</title></head>
+<body>
+<script>
+/*
+Program Name: WadeSport
+Author:       Nicholas Wade
+Purpose:      to determine what sport to play based off temperature
+Date Moded:   06 June 2012
+*/
+
+var temp; //temperature
+
+temp = prompt("What is the temperature outside?","");
+
+document.write("Welcome to the sport determiner!<br>");
+
+if(temp < 85){
+   if(temp < 70){
+      if(temp < 32) document.write("You should play chess!");
+      else document.write("You should play golf!");
+          }
+   else document.write("You should play tennis or golf!");
+   }
+else document.write("You should go swimming!");
+
+</script>
+</body>
+</html>

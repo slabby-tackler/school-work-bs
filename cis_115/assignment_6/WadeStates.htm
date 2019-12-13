@@ -1,0 +1,65 @@
+<html>
+
+<head>
+<title>WadeStates.htm</title>
+<script>
+function abbrev(choice){
+         var states = new Array(50);
+         var abbv = new Array(51);
+         var count;
+
+         states[1] = "Alaska"; states[2] = "Alabama"; states[3] = "Arkansas"; states[4] ="Arizona";
+         states[5] = "California"; states[6] = "Colorado"; states[7] = "Connecticut"; states[8] = "Delaware";
+         states[9] = "Florida"; states[10] = "Georgia"; states[11] = "Hawaii"; states[12] = "Iowa";
+         states[13] = "Idaho"; states[14] = "Illinois"; states[15] = "Indiana"; states[16] = "Kansas";
+         states[17] = "Kentucky"; states[18] = "Louisiana"; states[19] = "Massachusetts"; states[20] = "Maryland";
+         states[21] = "Maine"; states[22] = "Michigan"; states[23] = "Minnesota"; states[24] = "Missouri";
+         states[25] = "Mississippi"; states[26] = "Montana"; states[27] = "North Carolina"; states[28] = "North Dakota";
+         states[29] = "Nebraska"; states[30] = "New Hampshire"; states[31] = "New Jersey"; states[32] = "New Mexico";
+         states[33] = "Nevada"; states[34] = "New York"; states[35] = "Ohio"; states[36] = "Oklahoma";
+         states[37] = "Oregon"; states[38] = "Pennsylvania"; states[39] = "Rhode Island"; states[40] = "South Carolina";
+         states[41] = "South Dakota"; states[42] = "Tennessee"; states[43] = "Texas"; states[44] = "Utah";
+         states[45] = "Virginia"; states[46] = "Vermont"; states[47] = "Washington"; states[48] = "Wisconsin";
+         states[49] = "West Virginia"; states[50] = "Wyoming";
+
+         abbv[1] = "AK"; abbv[2] = "AL"; abbv[3] = "AR"; abbv[4] = "AZ";
+         abbv[5] = "CA"; abbv[6] = "CO"; abbv[7] = "CT"; abbv[8] = "DE";
+         abbv[9] = "FL"; abbv[10] = "GA"; abbv[11] = "HI"; abbv[12] = "IA";
+         abbv[13] = "ID"; abbv[14] = "IL"; abbv[15] = "IN"; abbv[16] = "KS";
+         abbv[17] = "KY"; abbv[18] = "LA"; abbv[19] = "MA"; abbv[20] = "MD";
+         abbv[21] = "ME"; abbv[22] = "MI"; abbv[23] = "MN"; abbv[24] = "MO";
+         abbv[25] = "MS"; abbv[26] = "MT"; abbv[27] = "NC"; abbv[28] = "ND";
+         abbv[29] = "NE"; abbv[30] = "NH"; abbv[31] = "NJ"; abbv[32] = "NM";
+         abbv[33] = "NV"; abbv[34] = "NY"; abbv[35] = "OH"; abbv[36] = "OK";
+         abbv[37] = "OR"; abbv[38] = "PA"; abbv[39] = "RI"; abbv[40] = "SC";
+         abbv[41] = "SD"; abbv[42] = "TN"; abbv[43] = "TX"; abbv[44] = "UT";
+         abbv[45] = "VA"; abbv[46] = "VT"; abbv[47] = "WA"; abbv[48] = "WI";
+         abbv[49] = "WV"; abbv[50] = "WY"; abbv[51] = -1;
+
+         for(count = 1; choice != states[count]; count++){
+             if(abbv[count] == -1)
+                break;
+         }
+
+         return abbv[count]
+         }
+</script>
+</head>
+
+<body>
+<script>
+var state;  //state choice
+var abbrev; //abbreviation
+
+state = prompt("What state would you like to see the abbreviation for?","");
+
+abbrev = abbrev(state);
+
+if(abbrev != -1)
+   document.write("The abbreviation for " + state + " is " + abbrev + ".");
+else
+    document.write("State not found");
+</script>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<html>
+<!--
+Program Name: WadeDynamic.htm
+Purpose:      Display 9 images in a 3 x 3 table and rotate them either left
+              or right depending on the button press of the user
+Author:       Nicholas Wade
+Date Mod:     25 July 2012
+-->
+<head>
+<title>WadeDynamic.htm</title>
+<script>
+var thepics = new Array(9);
+    thepics[0] = "Boston Access List.jpg";
+    thepics[1] = "Chicago Access lists.jpg";
+    thepics[2] = "cs part 7 dhcp binding.jpg";
+    thepics[3] = "cs part 7 nat translation.jpg";
+    thepics[4] = "Lab 2 WadeN.jpg";
+    thepics[5] = "Lab 5 WadeN.jpg";
+    thepics[6] = "Miami Access List.jpg";
+    thepics[7] = "NY access lists.jpg";
+    thepics[8] = "wade-net225-pkt 3 3 4.png";
+
+function displayimg(){
+   leftTop.src = thepics[0];
+   midTop.src = thepics[1];
+   rightTop.src = thepics[2];
+
+   leftMid.src = thepics[3];
+   midMid.src = thepics[4];
+   rightMid.src = thepics[5];
+
+   leftBot.src = thepics[6];
+   midBot.src = thepics[7];
+   rightBot.src = thepics[8];
+   }
+function rotateRight(){
+
+   var holdimg = thepics[8];
+
+   thepics[8] = thepics[7];
+   thepics[7] = thepics[6];
+   thepics[6] = thepics[5];
+   thepics[5] = thepics[4];
+   thepics[4] = thepics[3];
+   thepics[3] = thepics[2];
+   thepics[2] = thepics[1];
+   thepics[1] = thepics[0];
+   thepics[0] = holdimg;
+   displayimg();
+   }
+function rotateLeft(){
+
+   var holdimg = thepics[0];
+
+   thepics[0] = thepics[1];
+   thepics[1] = thepics[2];
+   thepics[2] = thepics[3];
+   thepics[3] = thepics[4];
+   thepics[4] = thepics[5];
+   thepics[5] = thepics[6];
+   thepics[6] = thepics[7];
+   thepics[7] = thepics[8];
+   thepics[8] = holdimg;
+   displayimg();
+   }
+</script>
+</head>
+
+<body onLoad = "displayimg();">
+
+<table border = "thin">
+<tr>
+     <td><img name = "leftTop"></td>
+     <td><img name = "midTop"></td>
+     <td><img name = "rightTop"></td>
+</tr>
+<tr>
+     <td><img name = "leftMid"></td>
+     <td><img name = "midMid"></td>
+     <td><img name = "rightMid"></td>
+</tr>
+<tr>
+     <td><img name = "leftBot"></td>
+     <td><img name = "midBot"></td>
+     <td><img name = "rightBot"></td>
+</tr>
+<tr>
+     <td colspan = 3 align = "center">
+     <input type = "button" value = "Rotate!" onClick = "rotateRight();">
+     <input type = "button" value = "Reverse!" onClick = "rotateLeft();">
+     </td>
+</tr>
+</table>
+</body>
+
+</html>

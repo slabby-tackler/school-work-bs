@@ -1,0 +1,26 @@
+<html><head><title>WadeInvoice</title></head>
+<body>
+<script>
+/*
+Program Name: WadeInovice
+Purpose:      processes data put in by user until the user runs out of data
+Author:       Nicholas Wade
+Date Mod:     03 July 2012
+*/
+
+var data;
+var invoice;
+
+data = prompt("do you have any data to put in ( y , n )?","");
+
+while (data == 'y'){
+       invoice = prompt("What is the invoice number?","");
+       document.write("Invoice " + invoice + " has been processed.<br>");
+       data = prompt("Do you have any other data to put in?","");
+       }
+
+document.write("Thank you. Have a nice day.");
+
+</script>
+</body>
+</html>

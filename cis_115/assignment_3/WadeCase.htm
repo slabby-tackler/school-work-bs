@@ -1,0 +1,37 @@
+<html><head><title>WadeCase</title></head>
+<body>
+<script>
+
+var choice; //class that the student is in
+var tuitionFee = 0;
+
+document.write("Welcome to your tuition calculator!<br>");
+choice = prompt("What class are you in? ( f, so, j, se )","");
+
+switch (choice){
+   case "f":  //Freshman
+   tuitionFee = 150;
+   break;
+
+   case "so": //Sophmore
+   tuitionFee = 250;
+   break;
+
+   case "j":  //Junior
+   tuitionFee = 350;
+   break;
+
+   case "se": //Senior
+   tuitionFee = 450;
+   break;
+
+   default:
+   document.write("Invalid input. Please run again with a valid input.")
+}
+if (tuitionFee > 0){
+   document.write("Your tuition is $" + tuitionFee);
+   }
+
+</script>
+</body>
+</html>
