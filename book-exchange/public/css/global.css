@@ -1,0 +1,24 @@
+.clickable {
+	cursor:pointer;
+}
+
+.navbar-default {
+	min-height:80px;
+}
+
+.name-column {
+	width:92.5%;
+}
+
+.admin-delete {
+	cursor:pointer;
+	color:#a94442;
+}
+
+.navbar-nav>li>a {
+	padding-top: 28px;
+}
+
+.admin-add {
+	cursor:pointer;
+}

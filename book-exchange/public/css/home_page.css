@@ -1,0 +1,54 @@
+html {
+	height:100%;
+	width:100%;
+}
+
+body {
+	width:100%;
+	height:100%;
+}
+
+.section {
+	height:100%;
+}
+
+#home-div {
+	background-image: url('../images/home_background.jpg');
+	background-repeat: no-repeat;
+	background-position: center center;
+	height:100%;
+	width:100%;
+	-webkit-background-size: cover;
+  	background-size: cover;
+  	padding-top:200px;
+}
+
+.title {
+	font-size:60px;
+}
+
+.logo {
+	margin-top:-25px;
+}
+
+.btn-primary,
+.btn-primary:hover {
+	background-color:#6a8ec9;
+	border:1px solid #6a8ec9;
+	color:#434549;
+}
+
+.btn-default,
+.btn-default:hover {
+	background-color:#D0D0D0;
+	border:1px solid #D0D0D0;
+	color:#434549;
+}
+
+.login-buttons {
+	padding-right:0;
+}
+
+.home-button {
+	width:78px;
+}
